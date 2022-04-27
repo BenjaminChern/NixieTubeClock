@@ -15,8 +15,8 @@ This document is intended to explain the technical details of my nixie tube cloc
     *   [Nixie Tubes: IN-12A](#nixie-tubes-in-12a)
     *   [Exixe Nixie Driver](#exixe Drivers)
     *   [Necessary PCBs](#necessary pcbs)
-        *   [HV PSU: YanZeyuan’s NCH6100HV](#hv-psu-yanzeyuans-nch6100hv)
-        *   [LV PSU: DROK LM2596](#lv-psu-drok-lm2596)
+        /*   [HV PSU: YanZeyuan’s NCH6100HV](#hv-psu-yanzeyuans-nch6100hv)
+        /*   [LV PSU: DROK LM2596](#lv-psu-drok-lm2596)
        
 *   [Assembly](#assembly)
     *   [3d Print Plate](#3d-print-plate-for-pcbs)
