@@ -1,5 +1,4 @@
 # Nixie Tube Clock
-An overview of the process I took to make a nixie tube clock 
 
 This document is intended to explain the technical details of my nixie tube clock, while also providing a rough overview of the journey I took to make this product a reality. Hopefully this write-up will help people avoid some of the mistakes I made during this project, and give people a look into the ideas I had to cut over time order to make this. 
 
