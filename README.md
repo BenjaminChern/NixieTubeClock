@@ -11,7 +11,7 @@ This document is intended to explain the technical details of my nixie tube cloc
     *   [Woodworking](#woodworking)
     *   [Wiring](#wiring)
 *   [Components](#components)
-    *   [Nixie Tubes: IN-12A](#nixie-tubes-in-12a)
+*   *   [Nixie Tubes: IN-12A](#nixie-tubes-in-12a)
     *   [Exixe Nixie Driver](#exixe Drivers)
     *   [Necessary PCBs](#necessary pcbs)
        *   [HV PSU: YanZeyuan’s NCH6100HV](#hv-psu-yanzeyuans-nch6100hv)
