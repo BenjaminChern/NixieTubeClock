@@ -6,7 +6,7 @@ This document is intended to explain the technical details of my nixie tube cloc
 *   [Photo Gallery](#photo-gallery)
 *   [Inspiration](#inspiration)
 *   [Planning and Research](#planning)
-  *   [Design](#design)
+*   *   [Design](#design)
      *   [Woodworking](#woodworking)
      *   [Wiring](#wiring)
  *   [Components](#components)
