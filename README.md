@@ -33,7 +33,7 @@ During the winter of 2021, I was looking for a new side project to work on over 
 # Planning and Research
 It quickly became obvious that an aluminum body would be impractical for the project at hand. The raw material along with the anodization process would be prohibativly expensive, and finding a shop to learn how to machine was not feasible. In the future, I still want to learn to machine metal, however this project uses only wood for its exterior. Luckily, there are a few makerspaces around the Atlanta area that teach woodworking so big thanks to [Decatur Makers](https://decaturmakers.org) and the staff for their help and guidance. The electronics part of the project was much more comfortable for me, as I have the most experience in this area. There is an entire section dedicated to the electronics below so I will cover it there. Once finished with a parts list and preliminary design, I ordered the parts and began to work on the design. 
 
-##Design 
+## Design 
 The housing design is mostly based off [this](www.etsy.com/listing/751460311) etsy listing. The faceplate and body were designed in Fusion360 however, I ended up changing the original design by quite a lot while sanding the product down. If I were to do it again, I would definitly add 1/8 to 1/4 on both sides, as the fit for the electronics is extremely tight. Unfortunately I lost the files when transferring my Fusion360 account to a different email but I do have the dimensions of most of the relevant parts. Also, the dimensions of the nixie tubes can be found [here](http://www.tube-tester.com/sites/nixie/dat_arch/IN-12A_IN-12B_03.pdf). 
    * **Faceplate**
      * Height-
