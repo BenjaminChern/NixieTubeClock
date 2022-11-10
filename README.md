@@ -7,7 +7,6 @@ This document is intended to explain the technical details of my nixie tube cloc
 *   [Inspiration](#inspiration)
 *   [Planning and Research](#planning-and-research)
     *   [Design](#design)
-    *   [Woodworking](#woodworking)
     *   [Wiring](#wiring)
  *   [Components](#components)
      *   [Nixie Tubes: IN-12A](#nixie-tubes-in-12a)
@@ -45,3 +44,6 @@ The housing design is mostly based off [this](www.etsy.com/listing/751460311) et
      * Width-
      * Height-
      * Thickness-
+
+## Wiring 
+At the time, I did not understand how to create wiring diagrams so I do not have anything proper for others to use. However I do have a picture of the diagram I used for much of the project. Do be warned though that it is quite messy and will probably not be much help. In essence the DC barrel jack outputs 15v which powers the arduino, the 170 volt boost converter, and a board that outputs 3.3 volts. The 3.3 volts and 170 volts are connected to the driver boards in parallel and while the SDA and SCL lines on the arduino are connected to the boards in parallel. Finally all of the boards are grounded to a common ground.  
