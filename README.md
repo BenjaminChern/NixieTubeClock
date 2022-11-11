@@ -7,7 +7,7 @@ This document is intended to explain the technical details of my nixie tube cloc
 *   [Inspiration](#inspiration)
 *   [Planning and Research](#planning-and-research)
     *   [Design](#design)
-    *   [Wiring Diagram](#wiring)
+    *   [Wiring Diagram](#wiring-diagram)
 *   [Components](#components)
     *   [Nixie Tubes: IN-12A](#nixie-tubes-in-12a)
     *   [Exixe Nixie Driver](#exixe Drivers)
