@@ -11,7 +11,7 @@ This document is intended to explain the technical details of my nixie tube cloc
 *   [Components](#components)
     *   [Nixie Tubes: IN-12A](www.youtube.com)
     *   [Exixe Nixie Driver](www.youtube.com)
-    *   [Other PCBs](#other pcbs)
+    *   [Other PCBs](#other-pcbs)
 *   [Assembly](#assembly)
     *   [Maple Wood Enclosure](#maple-wood-enclosure)
     *   [Walnut Wood Faceplate](#faceplate)
