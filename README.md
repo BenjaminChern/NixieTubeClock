@@ -57,3 +57,7 @@ This driver board was the heart of the project and the hardest to source. Many e
 ## Other PCBs
 
 There is not much to say about the other PCBs. The [NCH6100HV](https://www.ebay.com/itm/144301291333) recieves 14 volts from the DC barrel jack powering the whole clock and steps it up to 170V DC, powering the tubes while the [DROK lm2596](https://www.amazon.com/Converter-DROK-Immersion-Regulator-Transformer/dp/B078XQ5MWR/ref=sr_1_3?crid=1DIDPEJEBNTMV&keywords=drok+lm2596+dc+to+dc+buck+converter&qid=1637119219&sprefix=drok+lm%2Caps%2C165&sr=8-3) buck converter steps down the 14 volts to 3.3 in order to power the driver boards. The only complaint is that the DROK has a really bright green indicator LED on the board which slightly glows in the clock body. This was easily fixed with a few layers of black electrical tape though. 
+
+# Assembly
+
+This was by far the most time consuming part of the process. I had little experience with soldering and no experience with woodworking. Regardless, everything turned out fine and I am suprised with how well it went for my first time. In order to fit all the wiring into such a cramped space, I spliced multiple dupont wires together in order to create data-lines from the driver boards to the arduino. The result is quite cursed and most definately 
