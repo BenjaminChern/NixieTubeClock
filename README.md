@@ -244,4 +244,12 @@ void animateDepth(int tensHour, int onesHour, int tensMin, int onesMin)
 }  
 ```
 
-#
+# Animations
+This is the animation I decided to use when the clock changes time. Of course you could change it but this is what I liked best. 
+
+# Future Works
+Currently I am working on building a self playing piano. I am finished with the research phase and have recently ordered parts for my newest project. Be on the lookout for a new Github project in the distant future.
+
+# Credits
+
+Big thanks to my family for supporting me, IllyaMoskvin for being the inspiration for this writeup and providing tons of information along the way, DekuNukem for the nixie driver support, and the folks over at Decatur Makers for making this all possible 
