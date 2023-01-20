@@ -16,9 +16,6 @@ This document is intended to explain the technical details of my nixie tube cloc
     *   [Maple Wood Enclosure](#maple-wood-enclosure)
     *   [Walnut Wood Faceplate](#faceplate)
 *   [Programming](#programming)
-    *   [Libraries](#requirements)
-    *   [Driving The Tubes](#tube-driving)
-    *   [Reading The Time](#RTC)
 *   [Animations](#animations)
 *   [Future Work](#future-work)
 *   [Credits](#credits)
@@ -66,8 +63,185 @@ This was by far the most time consuming part of the process. I had little experi
 
 The housing was the most difficult part of this project. I originally intended to use a CNC machine to hollow out a 6x6x3 inch block of wood found [here](https://www.rockler.com/plain-maple-turning-blanks). However after talking to people at my local makerspace, I was convinced to hollow the block out by hand. I started with the drill press and made 4 large holes at the corners with the biggest bit. After that, I went in with a hammer and chisel to remove the four edges. Along the way I cracked the outside slightly which was to be expected considering the method I was using. By this time I was already frustrated with the slow pace but that was nothing compared to the sanding process. I sanded the same block of wood for about 16 hours spread over the course of 3 days. I was so scared of cracking the outside that I sanded down a whole inch worth of maple on both sides by the time I was done. The pain was worth it though, as I really enjoy how the final result looks and I call it a sucess for my first time. 
 
-## Walnut Wood Faceplate. 
+## Walnut Wood Faceplate 
 
 This luckily was much simpler than the housing. I modeled the faceplate in Fusion360 and sent the design to the laser cutter. Thanks to a kind old lady at the makerspace, I was advised to put masking tape on the surface of the wood which completely eliminated the burn marks around the outside of the cut. I would highly reccomend this technique to anyone laser cutting a piece that needs to look aesthetic. To finish both the faceplate and the body, I wiped it down with mineral oil and then applied 2 coats of tung oil finish 4 days apart.
 
+# Programming
 
+Compared to the rest of this project, the code was simple. I finished this in a day and it was a nice break from the physical construction of this project. The code uses the "RTCLib.h" and "exixe.h" libraries from arduino and nothing else. All the code for driving the nixie tubes can be found in the previous link to dekuNukem's github page where they lay out a comprehensive guide to setup. Finally I will post the code here although it is VERY messy and the logic is unoptimized. 
+
+```
+/*
+  exixe modules:
+  https://github.com/dekuNukem/exixe
+
+  library docs:
+  https://github.com/dekuNukem/exixe/tree/master/arduino_library
+
+  Demo 5: Loop digits on two tubes with crossfade animation
+*/
+
+#include "exixe.h"
+#include "RTClib.h"
+
+RTC_DS3231 rtc;
+
+// change those to the cs pins you're using
+int cs1 = 7;
+int cs2 = 8;
+int cs3 = 9;
+int cs4 = 10;
+int brightness = 90; 
+unsigned char count;
+byte currMin;
+
+exixe my_tube1 = exixe(cs1); //tens hour
+exixe my_tube2 = exixe(cs2); //ones hour
+exixe my_tube3 = exixe(cs3); //tens minute
+exixe my_tube4 = exixe(cs4); //ones minute
+
+DateTime past; 
+
+void setup()
+{
+   Serial.begin(9600); 
+  // ONLY CALL THIS ONCE
+  my_tube1.spi_init();
+
+  my_tube1.clear();
+  my_tube2.clear();
+  my_tube3.clear();
+  my_tube4.clear();
+
+  rtc.begin();
+  
+ 
+   //rtc.adjust(DateTime(F(__DATE__),F(__TIME__)));  
+   // ***NOTE*** rtc.adjust will remember the time that the sketch was uploaded, 
+   //and every time it powers on, it will adjust the time BACK to the time of the upload
+   //therefore run this line once and then NEVER again
+  DateTime now = rtc.now();
+
+  if(now.hour()>12){
+      animateDepth((((now.hour()-12) / 10)%10), ((now.hour()-12)%10), ((now.minute() / 10)%10), ((now.minute())%10));
+    }
+    else if(now.hour() == 0){
+      animateDepth(1, 2, ((now.minute() / 10)%10), ((now.minute())%10));
+    }
+    else{
+      animateDepth(((now.hour()) / 10)%10, ((now.hour())%10), ((now.minute() / 10)%10), ((now.minute())%10));
+
+    }
+  currMin = now.minute(); 
+}
+
+void loop()
+{
+  DateTime now = rtc.now();
+  if(now.minute() != currMin)
+  {
+    Serial.println("TIME CHANGE");
+    if(now.hour()>12){
+      animate((((now.hour()-12) / 10)%10), ((now.hour()-12)%10), ((now.minute() / 10)%10), ((now.minute())%10));
+    }
+    else if(now.hour() == 0){
+      animate(1, 2, ((now.minute() / 10)%10), ((now.minute())%10));
+    }
+    else{
+      animate(((now.hour()) / 10)%10, ((now.hour())%10), ((now.minute() / 10)%10), ((now.minute())%10));
+
+    }
+    currMin = now.minute(); 
+    
+  }
+  Serial.print("current hour is: ");
+  Serial.print(now.hour());
+  Serial.print("current minute is: ");
+  Serial.print(now.minute());
+  Serial.print("current second is: ");
+  Serial.println( now.second());
+  
+  
+  delay(1000);
+}
+void animate(int tensHour, int onesHour, int tensMin, int onesMin)
+{
+  my_tube1.show_digit(9, 100, 0);
+  my_tube2.show_digit(9, 100, 0);
+  my_tube3.show_digit(9, 100, 0);
+  my_tube4.show_digit(9, 100, 0);
+  
+  for(int i = 9; i>=0; i--)
+  {
+    if(i>=tensHour)
+    {
+      my_tube1.show_digit(i, 127, 0);
+    }
+     if(i>=onesHour)
+    {
+      my_tube2.show_digit(i, 127, 0);
+    }
+     if(i>=tensMin)
+    {
+      my_tube3.show_digit(i, 127, 0);
+    }
+     if(i>=onesMin)
+    {
+      my_tube4.show_digit(i, 127, 0);
+    }
+    delay(150);
+  }
+}
+void animateDepth(int tensHour, int onesHour, int tensMin, int onesMin)
+{
+  my_tube1.show_digit(1, 100, 0);
+  my_tube2.show_digit(1, 100, 0);
+  my_tube3.show_digit(1, 100, 0);
+  my_tube4.show_digit(1, 100, 0);
+  int digitArray[] = {1, 6, 2, 7, 5, 0, 4, 9, 8, 3}; 
+  bool flag1 = false;
+  bool flag2 = false;
+  bool flag3 = false;
+  bool flag4 = false;
+  
+  for(int i = 0; i<10; i++)
+  {
+    if(digitArray[i] == tensHour)
+    {
+      my_tube1.show_digit(digitArray[i], 127, 0);
+      flag1 = true;
+    }
+     if(digitArray[i] == onesHour)
+    {
+      my_tube2.show_digit(digitArray[i], 127, 0);
+      flag2 = true;
+    }
+     if(digitArray[i] == tensMin)
+    {
+      my_tube3.show_digit(digitArray[i], 127, 0);
+      flag3 = true;
+    }
+     if(digitArray[i] == onesMin)
+    {
+      my_tube4.show_digit(digitArray[i], 127, 0);
+      flag4 = true;
+    }
+    else if (flag1 == false){
+      my_tube1.show_digit(digitArray[i], 127, 0);
+    }
+    else if (flag2 == false){
+      my_tube2.show_digit(digitArray[i], 127, 0);
+    }
+    else if (flag3 == false){
+      my_tube3.show_digit(digitArray[i], 127, 0);
+    }
+    else if (flag4 == false){
+      my_tube4.show_digit(digitArray[i], 127, 0);
+    }
+    delay(150);
+  }
+}  
+```
+
+#
