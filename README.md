@@ -1,6 +1,7 @@
 # Nixie Tube Clock
 
 This document is intended to explain the technical details of my nixie tube clock, while also providing a rough overview of the journey I took to make this product a reality. Do note that this is my first fully completed project, and as well as my first time using many pieces of equipment. As such, take my process as a loose guideline instead of a set of instructions. Hopefully this write-up will help people avoid some of the mistakes I made during this project, and give people a look into the evolution of ideas during its creation. 
+![Front Closeup](https://user-images.githubusercontent.com/61395558/213846506-c208b172-4c5a-4dc1-bcdb-d27d578d9402.jpg)
 
 # Table of Contents
 *   [Photo Gallery](#photo-gallery)
@@ -40,7 +41,8 @@ The housing design is mostly based off [this](www.etsy.com/listing/751460311) et
      * Thickness-
 
 ## Wiring Diagram
-At the time, I did not understand how to create wiring diagrams so I do not have anything proper for others to use. However I do have a picture of the diagram I used for much of the project. Do be warned though that it is quite messy and will probably not be much help. In essence the DC barrel jack outputs 14v which powers the arduino, the 170 volt boost converter, and a board that outputs 3.3 volts. The 3.3 volts and 170 volts are connected to the driver boards in parallel and while the SDA, SCL, and PINOUT lines on the arduino are connected to the boards in parallel. Finally all of the boards are grounded to a common ground. 
+At the time, I did not understand how to create wiring diagrams so I do not have anything proper for others to use. However I do have a picture of the diagram I used for much of the project. Do be warned though that it is quite messy and will probably not be much help. In essence the DC barrel jack outputs 14v which powers the arduino, the 170 volt[Uploading Basic Baseboard .HEIC…]()
+ boost converter, and a board that outputs 3.3 volts. The 3.3 volts and 170 volts are connected to the driver boards in parallel and while the SDA, SCL, and PINOUT lines on the arduino are connected to the boards in parallel. Finally all of the boards are grounded to a common ground. 
 
 # Components
 Most of these parts are off-the-shelf products from places like Amazon or Digikey except for the driverboard. I have no complaints with any of these components and if I were to build this again, I would honestly order the same things. 
