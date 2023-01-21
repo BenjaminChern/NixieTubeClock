@@ -286,6 +286,7 @@ void animateDepth(int tensHour, int onesHour, int tensMin, int onesMin)
 
 # Animation
 This is the animation I decided to use when the clock changes time. Of course you could change it but this is what I liked best. 
+![ezgif-1-7a08af8c92](https://user-images.githubusercontent.com/61395558/213849102-415ec1cc-c5eb-4e2e-aff2-a5eab86c4bec.gif)
 
 # Future Works
 Currently I am working on building a self playing piano. I am finished with the research phase and have recently ordered parts for my newest project. Be on the lookout for a new Github project in the distant future.
