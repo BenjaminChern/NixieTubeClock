@@ -109,7 +109,7 @@ This luckily was much simpler than the housing. I modeled the faceplate in Fusio
 
 # Programming
 
-Compared to the rest of this project, the code was simple. I finished this in a day and it was a nice break from the physical construction of this project. The code uses the "RTCLib.h" and "exixe.h" libraries from arduino and nothing else. All the code for driving the nixie tubes can be found in the previous link to dekuNukem's github page where they lay out a comprehensive guide to setup. Finally I will post the code here although it is VERY messy and the logic is unoptimized. 
+Compared to the rest of this project, the code was simple. I finished this in a day and it was a nice break from the physical construction of this project. The code runs on a arduino nano which is perfect for the project. The code uses the "RTCLib.h" and "exixe.h" libraries from arduino and nothing else. All the code for driving the nixie tubes can be found in the previous link to dekuNukem's github page where they lay out a comprehensive guide to setup. Finally I will post the code here although it is VERY messy and the logic is unoptimized. 
 
 ```
 /*
