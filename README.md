@@ -59,6 +59,10 @@ The housing design is mostly based off [this](www.etsy.com/listing/751460311) et
      * Thickness-
 
 ## Wiring Diagram
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/61395558/213847691-8c291b48-8104-444c-942a-8e9b377d7e18.jpg" width=60% height=50%">
+</p>
+
 At the time, I did not understand how to create wiring diagrams so I do not have anything proper for others to use. However I do have a picture of the diagram I used for much of the project. Do be warned though that it is quite messy and will probably not be much help. In essence the DC barrel jack outputs 14v which powers the arduino, the 170 volt[Uploading Basic Baseboard .HEIC…]()
  boost converter, and a board that outputs 3.3 volts. The 3.3 volts and 170 volts are connected to the driver boards in parallel and while the SDA, SCL, and PINOUT lines on the arduino are connected to the boards in parallel. Finally all of the boards are grounded to a common ground. 
 
