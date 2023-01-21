@@ -25,6 +25,20 @@ This document is intended to explain the technical details of my nixie tube cloc
 *   [Future Work](#future-work)
 *   [Credits](#credits)
 
+# Photo Gallery
+                                                                                                                                        
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img src="https://user-images.githubusercontent.com/61395558/213847010-740acd19-e42b-431b-9e02-1d8d7db48735.jpg" width="350"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img src="https://user-images.githubusercontent.com/61395558/213847047-079c2e90-cb61-4a59-bde4-73f682b18211.jpg" width="350"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img src="https://user-images.githubusercontent.com/61395558/213846743-f7aa4a15-e72a-4817-91e3-f61856b371e3.jpg" width="350"/>
+     </div>
+</div>
+                                                                                                                                        
 # Inspiration
 During the winter of 2021, I was looking for a new side project to work on over the holidays when I found [IllyaMoskvin's nixie tube display](https://github.com/IllyaMoskvin/nixie-counter). Along with this video by the channel [GreatScott!](https://www.youtube.com/watch?v=ObgmVNV1Kfg), I began research into making this idea a reality. Big thanks to IllyaMoskvin in particular for their great write-up detailing their work. I looked at tons of nixie tube clocks online to find inspiration for the aesthetics of the build, and I finally settled upon [Neonix's clock](https://www.neonix.one/en#buy) as the product I wanted to emulate. The curved corners complemented the rounded edges of the display and I especially liked the slight inset of the wooden faceplate in the aluminum body. In my ideal world, the clock would have an alarm function with custom music, 3 buttons (one snooze, and two to toggle time), and a web app to set an auto-turn-off time to preserve the life of the clock. Looking back, that was very ambitious, and almost everything I had planned was eventually scrapped due to space, time and cost constraints. 
 
