@@ -295,4 +295,4 @@ Currently I am working on building a self playing piano. I am finished with the 
 
 # Credits
 
-Big thanks to my family for supporting me, IllyaMoskvin for being the inspiration for this writeup and providing tons of information along the way, DekuNukem for the nixie driver support, and the folks over at Decatur Makers for making this all possible 
+Big thanks to IllyaMoskvin for being the inspiration for this writeup and providing tons of information along the way, DekuNukem for the nixie driver support, and the folks over at Decatur Makers for making this all possible 
