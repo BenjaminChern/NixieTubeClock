@@ -291,7 +291,7 @@ This is the animation I decided to use when the clock changes time. Of course yo
 </p>
 
 # Future Works
-Currently I am working on building a self playing piano. I am finished with the research phase and have recently ordered parts for my newest project. Be on the lookout for a new Github project in the distant future.
+Currently I am working on building a self playing piano. I am finished with the research phase and have recently ordered parts for my newest project. Be on the lookout for a new Github project in the near future.
 
 # Credits
 
