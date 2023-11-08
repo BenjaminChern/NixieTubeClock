@@ -72,7 +72,7 @@ At the time, I did not understand how to create wiring diagrams so I do not have
   <img src="https://user-images.githubusercontent.com/61395558/213847820-7f668c7a-fa5d-4c33-bce5-2fe52b6ff2d6.jpg" width=60% height=50%">
 </p>
 
-Most of these parts are off-the-shelf products from places like Amazon or Digikey except for the driverboard. I have no complaints with any of these components and if I were to build this again, I would honestly order the same things. 
+Most of these parts are off-the-shelf products from places like Amazon or Digikey except for the driverboard. I have no complaints with any of these components and if I were to build this again, I would order the same things. 
 
 ## Nixie Tubes
 The 2 most common nixie tubes are the IN-12 and the IN-14 models. Both have decent documentation surrounding them, but the documentation most likely applies to rarer models like IN-1 and IN-19 tubes. These tubes were purchased on ebay from a Ukranian reseller before the war who is unfortunatly no longer in business. I purchased tubes that were NOS standing for "New Old Stock" meaning that they were never opened/used before. When they arrived, they were in perfect condition and I would reccomend purchasing NOS for anyone attempting the same thing.  
@@ -82,18 +82,18 @@ This driver board was the heart of the project and the hardest to source. Many e
 
 ## Other PCBs
 
-There is not much to say about the other PCBs. The [NCH6100HV](https://www.ebay.com/itm/144301291333) recieves 14 volts from the DC barrel jack powering the whole clock and steps it up to 170V DC, powering the tubes while the [DROK lm2596](https://www.amazon.com/Converter-DROK-Immersion-Regulator-Transformer/dp/B078XQ5MWR/ref=sr_1_3?crid=1DIDPEJEBNTMV&keywords=drok+lm2596+dc+to+dc+buck+converter&qid=1637119219&sprefix=drok+lm%2Caps%2C165&sr=8-3) buck converter steps down the 14 volts to 3.3 in order to power the driver boards. The only complaint is that the DROK has a really bright green indicator LED on the board which slightly glows in the clock body. This was easily fixed with a few layers of black electrical tape though. 
+There is not much to say about the other PCBs. The [NCH6100HV](https://www.ebay.com/itm/144301291333) recieves 14 volts from the DC barrel jack powering the whole clock and steps it up to 170V DC, powering the tubes while the [DROK lm2596](https://www.amazon.com/Converter-DROK-Immersion-Regulator-Transformer/dp/B078XQ5MWR/ref=sr_1_3?crid=1DIDPEJEBNTMV&keywords=drok+lm2596+dc+to+dc+buck+converter&qid=1637119219&sprefix=drok+lm%2Caps%2C165&sr=8-3) buck converter steps down the 14 volts to 3.3 in order to power the driver boards. The only complaint is that the DROK has a really bright green indicator LED on the board which slightly glows in the clock body. This was easily fixed with a few layers of black electrical tape. 
 
 # Assembly
 <p align="left">
   <img src="https://user-images.githubusercontent.com/61395558/213847892-572afab6-e4cf-4281-b2fb-8e73f19aa741.jpg" width=60% height=50%">
 </p>
 
-This was by far the most time consuming part of the process. I had little experience with soldering and no experience with woodworking. Regardless, everything turned out fine and I am suprised with how well it went for my first time. In order to fit all the wiring into such a cramped space, I spliced multiple dupont wires together in order to create data-lines from the driver boards to the arduino. The result is quite cursed and most definitely not suitable for long term applications, however it still is working for now. 
+This was by far the most time consuming part of the process. I had little experience with soldering and no experience with woodworking. Regardless, everything turned out fine and I am suprised with how well it went for my first time. In order to fit all the wiring into such a cramped space, I spliced multiple dupont wires together in order to create data-lines from the driver boards to the arduino. The result is not suitable for long term applications, however it still is working for now. 
 
 ## Maple Wood Enclosure
 
-The housing was the most difficult part of this project. I originally intended to use a CNC machine to hollow out a 6x6x3 inch block of wood found [here](https://www.rockler.com/plain-maple-turning-blanks). However after talking to people at my local makerspace, I was convinced to hollow the block out by hand. I started with the drill press and made 4 large holes at the corners with the biggest bit. After that, I went in with a hammer and chisel to remove the four edges. Along the way I cracked the outside slightly which was to be expected considering the method I was using. By this time I was already frustrated with the slow pace but that was nothing compared to the sanding process. I sanded the same block of wood for about 16 hours spread over the course of 3 days. I was so scared of cracking the outside that I sanded down a whole inch worth of maple on both sides by the time I was done. The pain was worth it though, as I really enjoy how the final result looks and I call it a sucess for my first time. 
+The housing was the most difficult part of this project. I originally intended to use a CNC machine to hollow out a 6x6x3 inch block of wood found [here](https://www.rockler.com/plain-maple-turning-blanks). However after talking to people at my local makerspace, I was convinced to hollow the block out by hand. I started with the drill press and made 4 large holes at the corners with the biggest bit. After that, I went in with a hammer and chisel to remove the four edges. Along the way I cracked the outside slightly which was to be expected considering the method I was using. By this time I was already frustrated with the slow pace but that was nothing compared to the sanding process. I sanded the same block of wood for about 16 hours spread over the course of 3 days. I was so scared of cracking the outside that I sanded down a whole inch worth of maple on both sides by the time I was done. The pain was worth it though, as I really enjoy how the final result looks and I call it a sucess for my first woodworking project. 
 <p align="left">
   <img src="https://user-images.githubusercontent.com/61395558/213848224-83fa51c0-f8f0-4687-a731-4d0249a67e0f.png" width=50% height=50%">
 </p>
@@ -105,7 +105,7 @@ The housing was the most difficult part of this project. I originally intended t
   <img src="https://user-images.githubusercontent.com/61395558/213848262-a905c5e8-e4c7-47f3-8636-b11744e8b276.jpg" width=50% height=50%">
 </p>
 
-This luckily was much simpler than the housing. I modeled the faceplate in Fusion360 and sent the design to the laser cutter. Thanks to a kind old lady at the makerspace, I was advised to put masking tape on the surface of the wood which completely eliminated the burn marks around the outside of the cut. I would highly reccomend this technique to anyone laser cutting a piece that needs to look aesthetic. To finish both the faceplate and the body, I wiped it down with mineral oil and then applied 2 coats of tung oil finish 4 days apart.
+This luckily was much simpler than the housing. I modeled the faceplate in Fusion360 and sent the design to the laser cutter. When laser cutting, I advise putting masking tape on the surface of the wood which completely eliminates burn marks around the outside of the cut. I would highly reccomend this technique to anyone laser cutting a piece that needs to look aesthetic. To finish both the faceplate and the body, I wiped it down with mineral oil and then applied 2 coats of tung oil finish 4 days apart.
 
 # Programming
 
@@ -285,13 +285,13 @@ void animateDepth(int tensHour, int onesHour, int tensMin, int onesMin)
 ```
 
 # Animation
-This is the animation I decided to use when the clock changes time. Of course you could change it but this is what I liked best. 
+This is the animation I decided to use when the clock changes time. I think it looks quite nice. 
 <p align="left">
   <img src="https://user-images.githubusercontent.com/61395558/213849102-415ec1cc-c5eb-4e2e-aff2-a5eab86c4bec.gif" width=60% height=50%">
 </p>
 
 # Future Works
-Currently I am working on building a self playing piano. I am finished with the research phase and have recently ordered parts for my newest project. Be on the lookout for a new Github project in the near future.
+Currently I am working on building a self playing piano. I am finished with the research phase and have recently ordered parts for my newest project. As of 11/08/23, I am finished with the project and am currently writing the documentation.
 
 # Credits
 
