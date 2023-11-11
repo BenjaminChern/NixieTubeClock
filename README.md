@@ -37,6 +37,9 @@ This document is intended to explain the technical details of my nixie tube cloc
      <div style="flex:1;padding-left:10px;">
           <img src="https://user-images.githubusercontent.com/61395558/213846743-f7aa4a15-e72a-4817-91e3-f61856b371e3.jpg" width="350"/>
      </div>
+    <div style="flex:1;padding-left:10px;">
+      <img src="https://user-images.githubusercontent.com/61395558/213849102-415ec1cc-c5eb-4e2e-aff2-a5eab86c4bec.gif" width=60% height=50%">
+    </div>
 </div>
                                                                                                                                         
 # Inspiration
